@@ -133,7 +133,9 @@ section.sidebar{
   width: 4%;
   height: 100vh;
 }
-
+.fonts{
+  width: 25px;
+}
 @media (max-width: 580px) {
   section.main{
     width: 100%;
