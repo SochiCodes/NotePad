@@ -13,49 +13,39 @@ import {
 } from 'react-icons/fa'
 
 
-export default function TextEditor() {
+export default class ComponentOne extends React.Component {
+  render() {
+    const turnBold = () =>{
+      document.execCommand("bold")
+    }
+    const turnItalics = () =>{
+      document.execCommand("italic")
+    }
+    const underline = () =>{
+    document.execCommand("underline")
+    }
+  
+    const copy = () => {
+      document.execCommand('copy')
+    }
+    const cut = () => {
+      document.execCommand('cut')
+    }
 
-  const turnBold = () =>{
-   document.execCommand("bold")
-  }
-  const turnItalics = () =>{
-    document.execCommand("italic")
-  }
-  const underline = () =>{
-  document.execCommand("underline")
-  }
+    const preventDefault = (event) => event.preventDefault()
 
-  const copy = () => {
-    document.execCommand('copy')
-  }
-  const cut = () => {
-    document.execCommand('cut')
-  }
-  const paste = () => {
-    document.execCommand('paste')
-  }
-  const chooseFont = () => {
-    document.execCommand('font')
-  }
-  const loadImage = () => {
-    document.execCommand('insertimage')
-  }
-
-
-  const preventDefault = (event) => event.preventDefault()
-  return (
-    
-    <div className='container'>
+    return (
+      <div className='container'>
         {/* ToolBox Section */}
         <section className='flex toolBar'>
-          <FaBold className='icon' onClick={turnBold} onMouseDown={(event) => event.preventDefault()}/>
-          <FaItalic className='icon' onClick={turnItalics} onMouseDown={preventDefault}/>
-          <FaUnderline className='icon' onClick={underline} onMouseDown={preventDefault}/>
-          <FaCopy className="icon" onClick={copy} onMouseDown={preventDefault}/>
-          <FaCut className="icon" onClick={cut} onMouseDown={preventDefault}/>
-          <FaPaste className="icon" onClick={paste} onMouseDown={preventDefault}/>
-          <ImFontSize className="icon" onClick={chooseFont} onMouseDown={preventDefault}/>
-          <FaImage className="icon" onClick={loadImage} onMouseDown={preventDefault}/>
+          <FaBold className='icon' onClick={turnBold} onMouseDown={(event) => event.preventDefault()} title="Make Bold"/>
+          <FaItalic className='icon' onClick={turnItalics} onMouseDown={preventDefault} title="Make Italic"/>
+          <FaUnderline className='icon' onClick={underline} onMouseDown={preventDefault} title="Underline Text"/>
+          <FaCopy className="icon" onClick={copy} onMouseDown={preventDefault} title="Copy Text"/>
+          <FaCut className="icon" onClick={cut} onMouseDown={preventDefault} title="Cut Text"/>
+          <FaPaste className="icon"  onMouseDown={preventDefault} title="Paste Copied"/>
+          <ImFontSize className="icon" onMouseDown={preventDefault} title="Change Font Size"/>
+          <FaImage className="icon" onMouseDown={preventDefault} title="Insert Image"/>
         </section>
 
         {/* Main Document Section */}
@@ -74,7 +64,8 @@ export default function TextEditor() {
               
             </div>
         </section>
-
-    </div>
-  )
+      </div>
+    );
+  }
 }
+

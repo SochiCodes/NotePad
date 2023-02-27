@@ -1,13 +1,15 @@
+import React from "react";
+
 import TextEditor from "./components/TextEditor";
+// import ComponentOne from "./components/ComponentOne"
 
 
-function App() {
-  return (
-    <div className="App">
-      <TextEditor/>
-
-    </div>
-  );
+export default class App extends React.Component {
+  render() {
+    return(
+      <div className="App">
+        <TextEditor/>
+      </div>
+    )
+  }
 }
-
-export default App;

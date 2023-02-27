@@ -102,7 +102,7 @@ section.toolBar .icon:hover{
 
 /* Editable document */
 section.main{
-  width: 91%;
+  width: 96%;
   margin-left: 80px;
 }
 section.main{
@@ -131,4 +131,47 @@ section.main div.document{
 section.sidebar{
   width: 4%;
   height: 100vh;
+}
+
+@media (max-width: 580px) {
+  section.main{
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+  section.main header{
+    padding: 0 0px;
+  }
+  section.toolBar{
+    min-width: 40px;
+  }
+  section.main header{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
+  section.main{
+    margin-left: 5px;
+  }
+}
+@media (max-width: 360px) {
+  section.main{
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+  section.main header{
+    padding: 0 0px;
+  }
+  section.toolBar{
+    min-width: 40px;
+  }
+  section.main header{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
+  section.main{
+    margin-left: 5px;
+  }
 }
