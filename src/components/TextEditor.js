@@ -60,7 +60,7 @@ export default class ComponentOne extends React.Component {
                 </select>
               </div>
             </header>
-            <div className="document" contentEditable="true" data-text="Start Typing...">
+            <div className="document" contentEditable="true" data-text='Start typing....example "Tinubu will never be our President... 😕"'>
               
             </div>
         </section>

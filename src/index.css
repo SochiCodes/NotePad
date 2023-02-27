@@ -126,7 +126,8 @@ section.main div.document{
   overflow-y: inherit;
 }
 [contentEditable=true]:empty:not(:focus):before{
-  content: attr(data-text)
+  content: attr(data-text);
+  color: var(--iconColor);
 }
 section.sidebar{
   width: 4%;
