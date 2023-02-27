@@ -70,8 +70,8 @@ export default function TextEditor() {
                 </select>
               </div>
             </header>
-            <div className="document" contentEditable="true">
-              Start Typing...
+            <div className="document" contentEditable="true" data-text="Start Typing...">
+              
             </div>
         </section>
 
